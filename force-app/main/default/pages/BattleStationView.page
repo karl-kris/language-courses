@@ -1,0 +1,23 @@
+<apex:page name="BattleStationView" controller="SupplyController">
+    <br/>
+    <b><apex:outputText value="SGE: Examen 1er Trimestre"></apex:outputText></b>
+    <br/>
+    <b><apex:outputText value="Autor: Adrián Blanca Enríquez"></apex:outputText></b>
+    <br/>
+    <br/>
+    <apex:tabPanel switchType="client">
+        <apex:tab name="Supplies" label="Supplies" title="Supplies">
+        	<apex:pageBlock title="Supply List sort by Total Cost">
+                <apex:pageBlockTable value="{!Supplies}" var="supply">
+                    <apex:column value="{!supply.Name}"/>
+                    <apex:column value="{!supply.Quantity__c}"/>
+                    <apex:column value="{!supply.Total_Cost__c}"/>
+                    <apex:column value="{!supply.Unit_Cost__c}"/>
+                    <apex:column value="{!supply.Battle_Station__c}"/>
+                    <apex:column value="{!supply.CreatedById}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlock>
+        </apex:tab>
+        <apex:tab name="Resources" label="Resources" title="Resources">Este tab esta en construcción</apex:tab>
+    </apex:tabPanel>
+</apex:page>
